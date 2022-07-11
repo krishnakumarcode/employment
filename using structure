@@ -1,0 +1,42 @@
+#include<limits.h>
+#include<stdio.h>
+#include<string.h>
+#include<conio.h>
+struct employee                                                     //Structure is initiated
+{
+    char empname[50], department[50];      
+    int empnumber,salary;
+};
+
+void main()
+{
+    int no,c;
+    struct employee emp[20];
+    printf("Enter the number of employee (MAX 20) : ");       //Number of employees are receved
+    scanf("%d",&no);
+    for(c=0;c<no;c++)
+    { 
+        printf("Name : ");                                     //Details are collected
+        scanf("%s",&emp[c].empname);
+        printf("Number : ");
+        scanf("%d",&emp[c].empnumber);
+        printf("Department : ");
+        scanf("%s",&emp[c].department);
+        printf("Salary : ");
+        scanf("%d",&emp[c].salary);
+        printf("\n");
+    }
+
+    printf("\n Result \n");
+    int i;
+
+    for (i=0;i < no; i++)
+    {
+        printf("Name : %s\n",emp[i].empname);                  //Details are printed 
+        printf("Number : %d\n",emp[i].empnumber);
+        printf("Department : %s\n",emp[i].department);
+        printf("Salary : %d\n",emp[i].salary);
+        printf("\n");
+    }
+    
+}
